@@ -39,9 +39,8 @@ export const Header = forwardRef(function Header({ className }, ref) {
       ref={ref}
       className={clsx(
         className,
-        'fixed inset-x-0 top-0 z-50 flex h-14 items-center justify-between gap-12 px-4 transition sm:px-6 lg:left-72 lg:z-30 lg:px-8 xl:left-80',
-        !isInsideMobileNavigation &&
-          'backdrop-blur-sm dark:backdrop-blur lg:left-72 xl:left-80',
+        'fixed inset-0 top-0 z-50 flex h-14 w-full items-center justify-between gap-12 px-4 transition sm:px-6 lg:px-8',
+        !isInsideMobileNavigation && 'backdrop-blur-sm dark:backdrop-blur',
         isInsideMobileNavigation
           ? 'bg-white dark:bg-zinc-900'
           : 'bg-white/[var(--bg-opacity-light)] dark:bg-zinc-900/[var(--bg-opacity-dark)]'
@@ -58,14 +57,10 @@ export const Header = forwardRef(function Header({ className }, ref) {
             'bg-zinc-900/7.5 dark:bg-white/7.5'
         )}
       />
-      <Search />
-      <div className="flex items-center gap-5 lg:hidden">
-        <MobileNavigation />
+      <div className="flex items-center gap-5">
         <Link href="/" aria-label="Home">
           <Logo className="h-6" />
         </Link>
-      </div>
-      <div className="flex items-center gap-5">
         <nav className="hidden md:block">
           <ul role="list" className="flex items-center gap-8">
             <TopLevelNavItem href="/">API</TopLevelNavItem>
@@ -73,8 +68,11 @@ export const Header = forwardRef(function Header({ className }, ref) {
             <TopLevelNavItem href="#">Support</TopLevelNavItem>
           </ul>
         </nav>
+      </div>
+      <div className="flex items-center gap-5">
         <div className="hidden md:block md:h-5 md:w-px md:bg-zinc-900/10 md:dark:bg-white/15" />
         <div className="flex gap-4">
+          <Search />
           <MobileSearch />
           <ModeToggle />
         </div>

@@ -7,20 +7,15 @@ import { SectionProvider } from '@/components/SectionProvider'
 export function Layout({ children, sections = [] }) {
   return (
     <SectionProvider sections={sections}>
-      <div>
-        <motion.header
-          layoutScroll
-          className="contents lg:pointer-events-none lg:fixed lg:inset-0 lg:z-40 lg:flex"
-        >
-          <div className="contents lg:pointer-events-auto lg:block">
-            <Header />
-          </div>
-        </motion.header>
-        <div className="relative px-4 pt-14 sm:px-6 lg:px-8">
-          <main className="py-16">
-            <Prose as="article">{children}</Prose>
+      <div className="min-h-screen w-full">
+        <Header />
+        <div className="relative mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-center px-4 pt-20 sm:px-6 sm:pt-24 lg:px-8">
+          <main className="w-full py-8 sm:py-16">
+            <Prose as="article" className="mx-auto max-w-3xl px-4 sm:px-0">
+              {children}
+            </Prose>
           </main>
-          <Footer />
+          <Footer className="mt-auto" />
         </div>
       </div>
     </SectionProvider>
