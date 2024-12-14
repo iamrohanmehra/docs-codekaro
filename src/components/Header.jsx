@@ -11,20 +11,6 @@ import {
 } from '@/components/MobileNavigation'
 import { useMobileNavigationStore } from '@/components/MobileNavigation'
 import { ModeToggle } from '@/components/ModeToggle'
-import { MobileSearch, Search } from '@/components/Search'
-
-function TopLevelNavItem({ href, children }) {
-  return (
-    <li>
-      <Link
-        href={href}
-        className="text-sm leading-5 text-zinc-600 transition hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
-      >
-        {children}
-      </Link>
-    </li>
-  )
-}
 
 export const Header = forwardRef(function Header({ className }, ref) {
   let { isOpen: mobileNavIsOpen } = useMobileNavigationStore()
@@ -61,19 +47,10 @@ export const Header = forwardRef(function Header({ className }, ref) {
         <Link href="/" aria-label="Home">
           <Logo className="h-6" />
         </Link>
-        <nav className="hidden md:block">
-          <ul role="list" className="flex items-center gap-8">
-            <TopLevelNavItem href="/">API</TopLevelNavItem>
-            <TopLevelNavItem href="#">Documentation</TopLevelNavItem>
-            <TopLevelNavItem href="#">Support</TopLevelNavItem>
-          </ul>
-        </nav>
       </div>
       <div className="flex items-center gap-5">
         <div className="hidden md:block md:h-5 md:w-px md:bg-zinc-900/10 md:dark:bg-white/15" />
         <div className="flex gap-4">
-          <Search />
-          <MobileSearch />
           <ModeToggle />
         </div>
         <div className="hidden min-[416px]:contents">
