@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import { useState } from 'react'
 import Link from 'next/link'
 import fs from 'fs'
@@ -104,18 +105,23 @@ export const getStaticProps = async () => {
 
 export default function HomePage({ mdxFiles }) {
   return (
-    <div className="min-h-screen pb-16">
-      <HeroPattern />
-      <div className="mx-auto max-w-4xl px-4 pt-20 sm:px-6 lg:px-8">
-        <h1 className="mb-4 text-4xl font-bold tracking-tight text-gray-900 dark:text-white">
-          Assignments
-        </h1>
-        <p className="mb-8 text-lg text-gray-600 dark:text-gray-300">
-          Welcome to our assignments page. Use the search bar below to find
-          specific assignments or browse through the complete list.
-        </p>
-        <AssignmentList mdxFiles={mdxFiles} />
+    <>
+      <Head>
+        <title>Codekaro Docs</title>
+      </Head>
+      <div className="min-h-screen pb-16">
+        <HeroPattern />
+        <div className="mx-auto max-w-4xl px-4 pt-20 sm:px-6 lg:px-8">
+          <h1 className="mb-4 text-4xl font-bold tracking-tight text-gray-900 dark:text-white">
+            Assignments
+          </h1>
+          <p className="mb-8 text-lg text-gray-600 dark:text-gray-300">
+            Welcome to our assignments page. Use the search bar below to find
+            specific assignments or browse through the complete list.
+          </p>
+          <AssignmentList mdxFiles={mdxFiles} />
+        </div>
       </div>
-    </div>
+    </>
   )
 }
