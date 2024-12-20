@@ -7,80 +7,64 @@ export const description =
 
 # Introduction to HTML
 
-Learn how to create web pages using fundamental HTML elements and embedding techniques.
+### Objective:
 
-## Objective
+Practice and demonstrate your understanding of HTML elements such as headings, paragraphs, anchor tags, media tags (image, video, and audio), and embedding external content like YouTube and Instagram posts. You'll also learn to create functional links using `mailto:`, `tel:`, and `wa.me`, along with incorporating external media into your webpage.
 
-Practice and demonstrate your understanding of HTML elements such as headings, paragraphs, anchor tags, media tags, and embedding external content.
+---
 
-## Assignment Tasks
+**1. Heading**
 
-### 1. Heading
+- Use the `<h1>` tag to create a **main heading** for your page, welcoming visitors to your assignment project.
 
-- Use the `<h1>` tag to create a **main heading** for your page
-- Welcome visitors to your assignment project
+**2. Paragraph**
 
-### 2. Paragraph
+- Use the `<p>` tag to create a **paragraph** that briefly describes your assignment.
+  - Provide information about the purpose and content of the project.
 
-- Use the `<p>` tag to create a **paragraph**
-- Include a brief description of your assignment
-- Provide information about the purpose and content
+**3. Anchor Tags**
 
-### 3. Anchor Tags
+- Create a **list** using `<ul>` and `<li>` tags with four items, each containing an anchor (`<a>`) tag:
+  1. **Email Address**
+     - Link to your email address using the `mailto:` attribute.
+  2. **Phone Number**
+     - Link to a phone number using the `tel:` attribute.
+  3. **WhatsApp Message**
+     - Link to a WhatsApp message using the URL: `https://wa.me/`.
+  4. **External Website**
+     - Link to an external website, ensuring it opens in a **new tab** by using `target="_blank"`.
 
-Create a list using `<ul>` and `<li>` tags with four items:
+**4. Image Tag**
 
-1. **Email Address**
-   - Link using the `mailto:` attribute
-2. **Phone Number**
-   - Link using the `tel:` attribute
-3. **WhatsApp Message**
-   - Link using `https://wa.me/`
-4. **External Website**
-   - Link with `target="_blank"`
+- Use the `<img>` tag to insert an **image** into your project:
+  - Set the `alt` attribute to provide a description of the image.
 
-### 4. Image Tag
+**5. Video Tag**
 
-- Use the `<img>` tag to insert an image
-- Include proper `alt` attribute
-- Ensure the image is relevant to your content
+- Use the `<video>` tag to **embed a video** in your project:
+  - Include controls for **play, pause, and volume**.
+  - Use either a local video file or an online source.
 
-### 5. Video Tag
+**6. Audio Tag**
 
-- Embed a video using the `<video>` tag
-- Include playback controls
-- Support either local or online source
+- Use the `<audio>` tag to add an **audio file** to your project:
+  - Provide controls for **play, pause, and volume**.
+  - Use either a local audio file or an online source.
 
-### 6. Audio Tag
+**7. Embedding a YouTube Video**
 
-- Add an audio file using the `<audio>` tag
-- Provide playback controls
-- Support either local or online source
+- Use the `<iframe>` tag to embed a **YouTube video** on your page:
+  - Get the embed code from YouTube and paste it into your project.
 
-### 7. YouTube Integration
+**8. Embedding an Instagram Post**
 
-- Embed a YouTube video using `<iframe>`
-- Get the embed code from YouTube
-- Ensure proper sizing and responsiveness
+- Embed an **Instagram post** on your page using:
+  - The `<blockquote>` tag for the post content.
+  - The `<script>` tag for the embed functionality.
+  - Get the embed code from the Instagram post you want to display.
 
-### 8. Instagram Integration
+---
 
-- Embed an Instagram post using:
-  - `<blockquote>` for content
-  - `<script>` for functionality
-  - Official embed code from Instagram
+### Note:
 
-## Testing Requirements
-
-- Verify all links are functional
-- Test media playback
-- Check embedded content display
-- Ensure proper loading of external resources
-
-## Resources
-
-- [HTML MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML)
-- [YouTube Embed Guide](https://support.google.com/youtube/answer/171780?hl=en)
-- [Instagram Embedding Guide](https://developers.facebook.com/docs/instagram/embedding/)
-
-Remember to validate your HTML code and test across different browsers for compatibility.
+- Test all links, images, and embedded content to ensure they work as expected.
