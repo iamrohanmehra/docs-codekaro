@@ -1,5 +1,5 @@
 {
-  "name": "tailwindui-protocol",
+  "name": "docs-codekaro",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,25 +10,18 @@
   },
   "browserslist": "defaults, not ie <= 11",
   "dependencies": {
-    "@algolia/autocomplete-core": "^1.7.3",
-    "@algolia/autocomplete-preset-algolia": "^1.7.3",
     "@headlessui/react": "^1.7.13",
     "@mdx-js/loader": "^2.1.5",
     "@mdx-js/react": "^2.1.5",
     "@next/mdx": "^13.0.3",
     "@sindresorhus/slugify": "^2.1.1",
     "@tailwindcss/typography": "^0.5.8",
-    "acorn": "^8.8.1",
-    "algoliasearch": "^4.14.2",
     "autoprefixer": "^10.4.7",
     "clsx": "^1.2.0",
     "focus-visible": "^5.2.0",
-    "framer-motion": "7.8.1",
-    "fs": "^0.0.1-security",
-    "mdast-util-to-string": "^3.1.0",
+    "framer-motion": "^11.15.0",
     "mdx-annotations": "^0.1.1",
     "next": "13.3.0",
-    "path": "^0.12.7",
     "postcss-focus-visible": "^6.0.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -37,8 +30,7 @@
     "remark-gfm": "^3.0.1",
     "shiki": "^0.11.1",
     "tailwindcss": "^3.3.0",
-    "unist-util-visit": "^4.1.1",
-    "zustand": "^4.3.2"
+    "zustand": "^5.0.2"
   },
   "devDependencies": {
     "eslint": "8.26.0",
