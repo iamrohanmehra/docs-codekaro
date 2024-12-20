@@ -1,0 +1,81 @@
+import { HeroPattern } from '@/components/HeroPattern'
+
+export const description =
+  'Practice building forms in React using useRef, controlled components, and React Hook Form.'
+
+<HeroPattern />
+
+# React Forms
+
+## **Objective:**
+
+In this assignment, you will apply your knowledge of **React Forms**, including **useRef**, **controlled components**, and **React Hook Form**. You will create two mini-projects:
+
+1. **BMI Calculator App**: A form that calculates Body Mass Index (BMI) based on user input.
+2. **To-Do App**: A simple to-do list app with add task functionality.
+
+---
+
+## **Assignment Breakdown:**
+
+### **1. BMI Calculator App**
+
+**Objective:** Build a BMI calculator where users can input their weight and height to calculate their Body Mass Index (BMI).
+
+**Requirements:**
+
+- **Form Setup:**
+  - Create a form with two input fields: one for weight (in kg) and one for height (in meters).
+  - Use **controlled components** for both inputs (using `useState`).
+  - Optionally, use **useRef** to access the input fields for focus management or validation (if necessary).
+- **Calculate BMI:**
+  - Create a button to calculate the BMI when clicked.
+  - Display the BMI result below the form after clicking the button.
+- **Validation:**
+  - Use **React Hook Form** for form validation. Make sure the weight and height fields are required and are valid numbers.
+- **BMI Categories:**
+  - After calculating the BMI, categorize the result into different BMI categories (e.g., Underweight, Normal, Overweight, Obese) and display the category.
+
+**UI Design:** Keep it simple and focus on functionality.
+
+### **2. To-Do App with Add Task Functionality**
+
+**Objective:** Build a simple to-do list app where users can add tasks to a list.
+
+**Requirements:**
+
+- **Form Setup:**
+  - Create a form with a single input field to add a new task.
+  - Use **controlled components** to manage the input field state.
+  - Optionally, use **useRef** to manage focus on the input field after adding a task.
+- **Add Task Functionality:**
+  - When the user submits the form, the task should be added to a list below the input field.
+  - Display each task with its name in the list.
+- **Clear Input After Submit:**
+  - Once a task is added, clear the input field using **React Hook Form** or manual state management (e.g., setting the input field value to an empty string after submission).
+- **Task Removal:**
+  - Provide a way to delete tasks from the list. Use a button next to each task to remove it.
+- **Task Completion (Optional):**
+  - Allow users to mark tasks as completed by clicking a checkbox next to the task. When checked, the task should have a strikethrough style.
+
+**UI Design:** Keep the design simple and user-friendly.
+
+---
+
+## **Instructions:**
+
+1. **Setup Your React App:**
+   - Use `create-react-app` or any other preferred setup method for both apps.
+   - Install **React Hook Form** for the BMI app to manage form validation.
+2. **Build the BMI Calculator:**
+   - Implement the input fields and calculate BMI logic.
+   - Use **useState** for controlled components and **useRef** (if necessary).
+   - Use **React Hook Form** for validation and handling the form submission.
+   - Display the BMI result and categorize it accordingly.
+3. **Build the To-Do App:**
+   - Implement the input field for adding tasks.
+   - Use **useState** for managing the list of tasks.
+   - Add functionality for deleting tasks and optionally marking them as completed.
+4. **Focus on Functionality:**
+   - Ensure that both apps are functional and user-friendly.
+   - Make sure all form fields are validated and handle edge cases (e.g., empty inputs).

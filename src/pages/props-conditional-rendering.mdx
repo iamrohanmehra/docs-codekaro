@@ -1,0 +1,100 @@
+import { HeroPattern } from '@/components/HeroPattern'
+
+export const description =
+  'Practice using props and conditional rendering in React by creating a tourist places display.'
+
+<HeroPattern />
+
+# Props & Conditional Rendering
+
+## **Objective:**
+
+In this assignment, you will practice working with props, mapping data, and implementing conditional rendering in React. You will create a functional component to display details of tourist places and render them dynamically using data passed as props.
+
+---
+
+### **Instructions:**
+
+### **1. Create the `TouristPlace` Component**
+
+- Create a new React component named `TouristPlace`.
+- This component should:
+  - Accept props.
+  - Display details of a tourist place (name, description, image, price, ratings, and the best season to visit).
+
+### **2. Render Data Using Props and `map`**
+
+- In your main `App` component or a dedicated parent component:
+  1. Define an array of objects to represent different tourist places (sample data is provided below).
+  2. Use the `map` function to iterate over this array and render a `TouristPlace` component for each tourist place.
+  3. Pass the relevant data for each place as props to the `TouristPlace` component.
+
+### **3. Add Conditional Rendering**
+
+Enhance your `TouristPlace` component with the following conditional rendering logic:
+
+1. **Price Indicator:**
+   - If the price is less than 12,000, display **"Cheaper"**.
+   - If the price is 12,000 or more, display **"Expensive"**.
+2. **Seasonal Highlight:**
+   - Highlight whether the place is best to visit in **"Summer"** or **"Winter"** based on the `whenToVisit` property.
+
+---
+
+### **Sample Data**
+
+Use the following array of objects to represent tourist places in India:
+
+```jsx {{title: "jsx"}}
+const touristPlaces = [
+  {
+    placeName: 'Goa',
+    desc: 'Famous for its beaches, nightlife, and Portuguese heritage.',
+    img: 'link_to_goa_image',
+    whenToVisit: 'Winter',
+    ratings: 4.5,
+    price: 15000,
+  },
+  {
+    placeName: 'Manali',
+    desc: 'A high-altitude Himalayan resort town known for its cool climate and snow-capped mountains.',
+    img: 'link_to_manali_image',
+    whenToVisit: 'Summer',
+    ratings: 4.7,
+    price: 10000,
+  },
+  {
+    placeName: 'Kerala',
+    desc: 'Known for its palm-lined beaches, backwaters, and rich traditions.',
+    img: 'link_to_kerala_image',
+    whenToVisit: 'Winter',
+    ratings: 4.8,
+    price: 20000,
+  },
+  {
+    placeName: 'Jaipur',
+    desc: 'The capital of Rajasthan, known for its historic palaces and vibrant culture.',
+    img: 'link_to_jaipur_image',
+    whenToVisit: 'Winter',
+    ratings: 4.6,
+    price: 12000,
+  },
+]
+```
+
+---
+
+### **Expected Features**
+
+- Use **props** to pass data from the parent component to the `TouristPlace` component.
+- Render all the tourist places dynamically using the **`map`** function.
+- Use **conditional rendering** to:
+  - Display whether a place is **"Cheaper"** or **"Expensive"** based on its price.
+  - Highlight whether the place is ideal to visit in **"Summer"** or **"Winter"**.
+
+---
+
+### **Bonus Task (Optional)**
+
+1. Add CSS styling to make the tourist places visually appealing.
+2. Use a `div` with a class like `place-card` to style each `TouristPlace`.

@@ -1,0 +1,104 @@
+import { HeroPattern } from '@/components/HeroPattern'
+
+export const description =
+  'Learn how to use map and filter methods to manipulate arrays in JavaScript.'
+
+<HeroPattern />
+
+# Array Mapping & Filters
+
+## **Objective:**
+
+Utilize the provided **`movies`** array to perform various operations using **`map()`**, **`filter()`**, and method chaining. This assignment will help you understand how to manipulate and extract data from arrays effectively.
+
+---
+
+### **Dataset:**
+
+The dataset is available at the following link:
+
+👉 [Movies Data](https://github.com/akshkgd/frontend-cohort/blob/main/map%20and%20filters/data.js)
+
+Each movie object has the following properties:
+
+- **`title`**: The title of the movie.
+- **`genre`**: The genre(s) of the movie (comma-separated string).
+- **`year`**: The year the movie was released.
+- **`imdbRating`**: The IMDb rating of the movie.
+- **`actors`**: An array of actors featured in the movie.
+
+---
+
+### **Tasks**
+
+### **1. Mapping Tasks**
+
+a. Create new arrays using **`map()`**:
+
+- An array containing only the **titles** of the movies.
+- An array containing **movie titles** along with their **IMDb ratings** in the format:
+  ```js {{title: "js"}}
+  [{ title: "Movie Name", imdbRating: 8.5 }, ...]
+  ```
+
+### **2. Filtering Tasks**
+
+b. Create new arrays using **`filter()`**:
+
+- **Thriller Movies** released **after the year 2000**.
+- **Drama Movies** with **IMDb ratings above 8.5**.
+- **Action Movies** starring **Leonardo DiCaprio**.
+
+### **3. Chaining Tasks**
+
+c. Perform operations using **method chaining**:
+
+- Find all **Drama Movies** featuring **Christian Bale**.
+  - Use a combination of **`filter()`** and **`map()`** to extract the required data.
+- Find all **Drama Movies** featuring **Tim Robbins**.
+
+---
+
+### **Example Code Snippet**
+
+Here’s an example to help you get started:
+
+```js {{title: "js"}}
+// Example Data
+const movies = [
+  {
+    title: 'Inception',
+    genre: 'Thriller, Action',
+    year: 2010,
+    imdbRating: 8.8,
+    actors: ['Leonardo DiCaprio', 'Tom Hardy', 'Joseph Gordon-Levitt'],
+  },
+  {
+    title: 'The Shawshank Redemption',
+    genre: 'Drama',
+    year: 1994,
+    imdbRating: 9.3,
+    actors: ['Tim Robbins', 'Morgan Freeman'],
+  },
+]
+
+// Task 1: Mapping Titles
+const movieTitles = movies.map((movie) => movie.title)
+console.log(movieTitles) // ["Inception", "The Shawshank Redemption"]
+```
+
+---
+
+### **Submission Guidelines**
+
+1. Write all the solutions in a **JavaScript file** or your preferred JavaScript environment (e.g., CodeSandbox, JSFiddle, or a browser console).
+2. Test and verify your outputs for each task.
+3. Organize your code into sections for **Mapping**, **Filtering**, and **Chaining**.
+
+---
+
+### **Tips**
+
+- Use **console.log()** to debug and verify each step.
+- Refer to the [MDN Documentation on Array Methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) for further details on **`map()`**, **`filter()`**, and **`reduce()`**.
+- Write clean, readable, and commented code to make your logic clear.

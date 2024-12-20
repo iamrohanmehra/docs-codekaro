@@ -1,0 +1,43 @@
+import { HeroPattern } from '@/components/HeroPattern'
+
+export const description =
+  'Learn the basics of DOM manipulation by creating a BMI calculator.'
+
+<HeroPattern />
+
+# Intro to DOM
+
+- Create a webpage with the following:
+  - An input field for the user’s **name**.
+  - Two input fields for the **weight (kg)** and **height (cm)**.
+  - A **Calculate BMI** button.
+  - A placeholder `<div>` or `<p>` to display the BMI result.
+- When the user clicks the **Calculate BMI** button, the following should happen:
+  - Capture the values of the **name**, **weight**, and **height** from the input fields.
+  - Calculate the BMI using this formula:
+    BMI = weight / ((height / 100) \*\* 2);
+  - Display the calculated BMI in the placeholder element along with a message:
+    - `"Hi [Name], your BMI is [calculated BMI]. You are categorized as '[Category]'"`.
+- Based on the BMI value, display the corresponding category:
+  - **Underweight**: BMI < 18.5
+  - **Normal weight**: 18.5 ≤ BMI < 24.9
+  - **Overweight**: 25 ≤ BMI < 29.9
+  - **Obesity**: BMI ≥ 30
+- Add a **Reset** button that clears the input fields and the result message.
+- Change the color of the result text based on the BMI category **(Optional)**:
+  - Underweight: Blue
+  - Normal weight: Green
+  - Overweight: Orange
+  - Obesity: Red
+
+### Example Interaction:
+
+**Input:**
+
+- Name: Rohit
+- Weight: 75 kg
+- Height: 170 cm
+
+**Output:** `Hi Rohit, your BMI is 25.9. You are categorized as 'Overweight'.`
+
+The text will appear in **orange** color.

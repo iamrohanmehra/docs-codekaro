@@ -1,0 +1,42 @@
+import { HeroPattern } from '@/components/HeroPattern'
+
+export const description =
+  'Learn how to use event listeners to create interactive forms in JavaScript.'
+
+<HeroPattern />
+
+# Event Listeners
+
+## **Objective:**
+
+Create a simple form that reacts to various events, such as mouse events, keyboard input, and scrolling. This will demonstrate the use of `querySelector`, `querySelectorAll`, `addEventListener`, and other event listeners like `onmouseenter`, `onmouseleave`, `onkeyup`, `onkeydown`, and `scroll`.
+
+### **Task Instructions:**
+
+1. **Create the HTML Structure:**
+   - Create a form with the following fields:
+     - A text input for the user's name (with a placeholder "Enter your name").
+     - A checkbox for subscribing to a newsletter (labeled "Subscribe to newsletter").
+     - A dropdown menu with options for selecting a favorite color.
+     - A submit button.
+   - Create a separate `div` that will display feedback messages based on user interactions.
+2. **Event Listeners:**
+   - **Text Input:**
+     - Add an event listener for the `onkeyup` event.
+     - When the user types in the text input, update a `div` with a message like "Hello, [name]!" based on the input.
+   - **Checkbox:**
+     - Add an event listener for the `onchange` event.
+     - When the user checks or unchecks the checkbox, display a message in the `div` saying either "Subscribed!" or "Unsubscribed!".
+   - **Dropdown (Select):**
+     - Add an event listener for the `onchange` event.
+     - When the user selects a color from the dropdown, change the background color of the form to the selected color and display a message in the `div` saying "Your favorite color is [color]!".
+   - **Mouse Events on Submit Button:**
+     - Add event listeners for `onmouseenter` and `onmouseleave` events on the submit button.
+     - When the mouse enters the button, change its background color to green, and when it leaves, change it back to its original color.
+   - **Scroll Event:**
+     - Add an event listener for the `scroll` event.
+     - When the user scrolls the page, display a message in the `div` saying "You are scrolling!".
+   - **Window Load Event:**
+     - Add an event listener for the `load` event to change the background color of the form when the page loads (for example, change it to light gray).
+3. **Form Validation (Optional):**
+   - If the user tries to submit the form without entering their name, display an alert with the message "Please enter your name!" and prevent form submission.

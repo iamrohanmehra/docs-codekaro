@@ -1,0 +1,121 @@
+import { HeroPattern } from '@/components/HeroPattern'
+
+export const description =
+  'Learn to use React Router DOM by creating an Instagram-like user feed application.'
+
+<HeroPattern />
+
+# React Router DOM
+
+### **Objective:**
+
+Create an Instagram-like user feed using React and React Router DOM. The goal is to display a list of users with their respective posts. Users can click on a specific post to view detailed information about it.
+
+---
+
+### **Requirements:**
+
+1. **User Feed Page:**
+   - Display a list of users.
+   - Each user should have a set of posts visible below their name.
+   - Posts should be displayed as images in a grid or row layout under the user's section.
+2. **Post Details Page:**
+   - When a user clicks on a post, navigate to a **Post Details Page** that displays:
+     - The post's image.
+     - The number of likes the post has.
+     - The caption of the post.
+     - The number of people who viewed the post.
+     - The number of people who shared the post.
+   - Do **not** create a pop-up for this. Use proper routing to navigate to the Post Details Page.
+3. **Routing:**
+   - Use `React Router DOM` to implement navigation:
+     - A route for the **User Feed Page**.
+     - A route for the **Post Details Page** that dynamically shows the details of the selected post.
+4. **Design:**
+   - Focus on functionality, not on design. Keep it simple and clean.
+
+---
+
+### **Sample Data:**
+
+Use the following data for the assignment:
+
+```jsx {{title: "jsx"}}
+const usersData = [
+  {
+    id: 1,
+    username: 'john_doe',
+    posts: [
+      {
+        id: 101,
+        image:
+          'https://images.unsplash.com/photo-1539920951450-2b2d59cff66d?q=80&w=1288&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        likes: 123,
+        caption: 'Just a beautiful day!',
+        views: 456,
+        shares: 78,
+      },
+      {
+        id: 102,
+        image:
+          'https://images.unsplash.com/photo-1526667442450-403901e0c583?q=80&w=1364&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        likes: 98,
+        caption: 'Loving this view.',
+        views: 234,
+        shares: 56,
+      },
+      {
+        id: 103,
+        image:
+          'https://images.unsplash.com/photo-1530721733923-e2df89901503?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        likes: 203,
+        caption: 'What an amazing journey.',
+        views: 890,
+        shares: 60,
+      },
+    ],
+  },
+  {
+    id: 2,
+    username: 'jane_smith',
+    posts: [
+      {
+        id: 201,
+        image:
+          'https://images.unsplash.com/photo-1694125400089-e9db301ea643?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        likes: 150,
+        caption: 'Adventures await!',
+        views: 567,
+        shares: 79,
+      },
+      {
+        id: 202,
+        image:
+          'https://images.unsplash.com/photo-1414609245224-afa02bfb3fda?q=80&w=1289&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        likes: 75,
+        caption: 'Sunset by the beach.',
+        views: 321,
+        shares: 45,
+      },
+      {
+        id: 203,
+        image:
+          'https://images.unsplash.com/photo-1482722784578-818b6423e6ac?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        likes: 234,
+        caption: 'Best trip ever.',
+        views: 712,
+        shares: 103,
+      },
+    ],
+  },
+]
+```
+
+---
+
+### **Instructions:**
+
+1. Use the provided `data` array to populate the User Feed Page and Post Details Page.
+2. On the **User Feed Page**, loop through the `data` array to display all users and their posts.
+3. Implement routing so that clicking on a post navigates to the **Post Details Page**.
+4. Ensure all necessary post details (image, likes, caption, views, shares) are displayed on the Post Details Page.

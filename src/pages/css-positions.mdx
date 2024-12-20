@@ -1,0 +1,87 @@
+# CSS Positions
+
+### Objective:
+
+Reinforce the concepts of `static`, `relative`, `absolute`, `fixed`, and `sticky` positioning through practical exercises.
+
+---
+
+### Instructions:
+
+1. Create a new HTML file named `positions.html`.
+2. Link a CSS file named `styles.css` to the HTML file.
+3. Complete the tasks below using proper HTML structure and CSS.
+
+---
+
+### Tasks:
+
+### **Part 1: Static Positioning (Default)**
+
+- Add a `<div>` with the text: "This is static positioned."
+- Do **not** apply any `position` property; observe the default behavior.
+
+### **Part 2: Relative Positioning**
+
+- Create a `<div>` with the text: "This is relatively positioned."
+- Apply the following styles:
+
+```css {{ title: 'css' }}
+position: relative;
+top: 20px;
+left: 20px;
+background-color: lightblue;
+```
+
+- Observe how the element moves relative to its normal position.
+
+### **Part 3: Absolute Positioning**
+
+- Add a container `<div>` with a class `container` and place another `<div>` inside it with the text: "This is absolutely positioned."
+- Apply the following styles:
+
+```css {{ title: 'css' }}
+.container {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background-color: lightgray;
+}
+.container div {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: lightgreen;
+}
+```
+
+- Observe how the child `<div>` positions itself inside the `.container`.
+
+### **Part 4: Fixed Positioning**
+
+- Add a `<div>` with the text: "This is fixed positioned."
+- Apply the following styles:
+
+```css {{ title: 'css' }}
+position: fixed;
+top: 0;
+right: 0;
+background-color: lightcoral;
+```
+
+- Scroll the page to observe how the element remains fixed in the viewport.
+
+### **Part 5: Sticky Positioning**
+
+- Create a `<div>` with the text: "This is sticky positioned."
+- Apply the following styles:
+
+```css {{ title: 'css' }}
+position: sticky;
+top: 50px;
+background-color: lightyellow;
+```
+
+- Add enough content to the page to enable scrolling. Observe how the element behaves as you scroll.
+
+---

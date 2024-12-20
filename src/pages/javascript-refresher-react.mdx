@@ -1,0 +1,32 @@
+import { HeroPattern } from '@/components/HeroPattern'
+
+export const description =
+  'Practice JavaScript concepts essential for React development.'
+
+<HeroPattern />
+
+# JavaScript Refresher for React
+
+## **Objective:**
+
+Practice JavaScript concepts (arrow functions, import/export, template literals, ternary operators, destructuring, array mapping, and filters).
+
+### **Task:**
+
+1. Create an array of at least 5 objects representing movies. Each movie should have:
+   - `title` (string)
+   - `year` (number)
+   - `rating` (number between 1-10)
+   - `genre` (string, e.g., "Action," "Drama")
+   - `isWatched` (boolean)
+2. **Part 1:** Movie List
+   - Use `map()` to create a list of movie titles with their year in a formatted string (e.g., "Inception (2010)"). Display this list in the console.
+3. **Part 2:** Filtering Movies
+   - Use `filter()` to create a list of movies with a rating of 8 or higher.
+   - Display this list in a formatted string: `"Title: Inception | Year: 2010 | Rating: 8.8"`
+4. **Part 3:** Ternary for Watched Status
+   - Display whether each movie has been watched using a ternary operator: `"You have watched Inception"` or `"You need to watch Inception."`
+5. **Part 4:** Use Destructuring
+   - Destructure the `title` and `rating` of each movie and log a summary: `"Inception has a rating of 8.8"`
+6. **Bonus:** Modularize Code
+   - Create a module to export the array of movies and import it into your main file.

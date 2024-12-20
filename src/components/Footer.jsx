@@ -3,9 +3,6 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { Transition } from '@headlessui/react'
 
-import { Button } from '@/components/Button'
-import { navigation } from '@/components/Navigation'
-
 function CheckIcon(props) {
   return (
     <svg viewBox="0 0 20 20" aria-hidden="true" {...props}>
@@ -69,10 +66,6 @@ function Feedback() {
 
   function onSubmit(event) {
     event.preventDefault()
-
-    // event.nativeEvent.submitter.dataset.response
-    // => "yes" or "no"
-
     setSubmitted(true)
   }
 
@@ -96,63 +89,6 @@ function Feedback() {
       >
         <FeedbackThanks />
       </Transition>
-    </div>
-  )
-}
-
-function PageLink({ label, page, previous = false }) {
-  return (
-    <>
-      <Button
-        href={page.href}
-        aria-label={`${label}: ${page.title}`}
-        variant="secondary"
-        arrow={previous ? 'left' : 'right'}
-      >
-        {label}
-      </Button>
-      <Link
-        href={page.href}
-        tabIndex={-1}
-        aria-hidden="true"
-        className="text-base font-semibold text-zinc-900 transition hover:text-zinc-600 dark:text-white dark:hover:text-zinc-300"
-      >
-        {page.title}
-      </Link>
-    </>
-  )
-}
-
-function PageNavigation() {
-  let router = useRouter()
-  let allPages = navigation.flatMap((group) => group.links)
-  let currentPageIndex = allPages.findIndex(
-    (page) => page.href === router.pathname
-  )
-
-  if (currentPageIndex === -1) {
-    return null
-  }
-
-  let previousPage = allPages[currentPageIndex - 1]
-  let nextPage = allPages[currentPageIndex + 1]
-
-  if (!previousPage && !nextPage) {
-    return null
-  }
-
-  return (
-    <div className="flex">
-      {previousPage && (
-        <div className="flex flex-col items-start gap-3">
-          <PageLink label="Previous" page={previousPage} previous />
-        </div>
-      )}
-      {nextPage && (
-        <div className="ml-auto flex flex-col items-end gap-3">
-          <PageLink label="Next" page={nextPage} />
-        </div>
-      )}
     </div>
   )
 }
@@ -220,8 +156,7 @@ export function Footer() {
 
   return (
     <footer className="mx-auto max-w-2xl space-y-10 pb-16 lg:max-w-5xl">
-      <Feedback key={router.pathname} />
-      <PageNavigation />
+      {/* <Feedback key={router.pathname} /> */}
       <SmallPrint />
     </footer>
   )

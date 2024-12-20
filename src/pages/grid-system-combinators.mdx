@@ -1,0 +1,58 @@
+import { HeroPattern } from '@/components/HeroPattern'
+
+export const description =
+  'Learn about CSS Grid system, combinators, and root variables.'
+
+<HeroPattern />
+
+# Grid System & Combinators
+
+## Objective:
+
+Understand and implement the CSS Grid system, combinators, and how to use the `:root` pseudo-class for global CSS variables.
+
+### **Instructions**
+
+1. Create an HTML file named `css-grid-combinators.html`.
+2. Link a CSS file named `css-grid-combinators.css`.
+3. Complete the tasks below to practice `:root`, CSS combinators, and the grid system.
+
+---
+
+## **Tasks:**
+
+### **Task 1: Using `:root` for Global Variables**
+
+- Create a `:root` section in your CSS file to define the following variables:
+  - `-primary-color`: `#4CAF50`
+  - `-secondary-color`: `#f0f0f0`
+  - `-font-size`: `16px`
+  - `-gap-size`: `20px`
+- Use these variables throughout your CSS for colors, font sizes, and spacing.
+
+### **Task 2: Parent-Child Styling with CSS Combinators**
+
+- Create a `<div>` with the class `combinators-demo` and add the following child elements inside it:
+  1. A `<h2>` element with the text "CSS Combinators".
+  2. A `<p>` element with some placeholder text.
+  3. A `<ul>` containing three `<li>` items with dummy text.
+- Use CSS combinators to style the elements as follows:
+  - The `<p>` that immediately follows the `<h2>` should have a different text color using the adjacent sibling combinator (`+`).
+  - The `<li>` items inside the `<ul>` should have a border using the child combinator (`>`).
+  - Any `<p>` inside `.combinators-demo` should have a distinct font size using the descendant combinator (a space).
+
+### **Task 3: Creating a Basic Grid Layout**
+
+- Create a section with the class `grid-layout` containing the following items:
+  - Six `<div>` elements labeled "Item 1", "Item 2", etc.
+- Use CSS Grid to create the following layout:
+  - A 3x2 grid (3 columns, 2 rows).
+  - A gap between rows and columns using the `-gap-size` variable.
+  - Center the text inside each grid item both horizontally and vertically.
+- Add hover effects for the grid items to change their background color to `-secondary-color`.
+
+### **Task 4: Nested Grid Layout**
+
+- Inside one of the grid items from Task 3 (e.g., "Item 3"), create a nested grid with four smaller boxes labeled "A", "B", "C", and "D".
+- Use a 2x2 grid for this nested layout.
+- Apply a border to each box and style them using the `-primary-color`.

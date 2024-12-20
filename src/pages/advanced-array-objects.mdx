@@ -1,0 +1,57 @@
+import { HeroPattern } from '@/components/HeroPattern'
+
+export const description =
+  'Learn advanced JavaScript array and object methods by managing a collection of books.'
+
+<HeroPattern />
+
+# Advance Array & Objects
+
+### **Objective**:
+
+Use advanced JavaScript array and object methods to create a simple program that manages a collection of books.
+
+### **Task**:
+
+1. **Create an Initial Array of Books**:
+
+   Each book should be an object with the following properties:
+
+   - `title` (string)
+   - `author` (string)
+   - `publishedYear` (number)
+
+   Example:
+
+   ```js {{title: "js"}}
+   const books = [
+     { title: 'Book A', author: 'Author 1', publishedYear: 2000 },
+     { title: 'Book B', author: 'Author 2', publishedYear: 2005 },
+     { title: 'Book C', author: 'Author 3', publishedYear: 2010 },
+   ]
+   ```
+
+2. **Perform the Following Operations**:
+   - **Add a New Book**: Use `unshift` to add a new book to the beginning of the array.
+   - **Remove the Oldest Book**: Use `shift` to remove the first book.
+   - **Find a Book by Title**: Use `find` to search for a book by its title (hardcode the title for now).
+   - **List Books by a Specific Author**: Use `filter` to get all books written by a particular author.
+   - **Check for Recent Books**: Use `some` to check if there are any books published in the last 5 years.
+   - **Create a New Array with Titles Only**: Use `map` to create a new array that contains only the titles of the books.
+   - **Make a Shallow Copy of the Array**: Use the spread operator to create a shallow copy of the `books` array.
+   - **Combine Two Arrays**: Create a second array of books and use `concat` to combine it with the existing array.
+3. **Bonus Challenge (Optional)**:
+   - Implement a deep copy of the `books` array using structured cloning or JSON methods.
+   - Use `toSpliced` to replace or remove a book in the array.
+
+---
+
+### **Output Example**:
+
+After performing the operations, the console should display:
+
+1. The updated book list.
+2. The found book (if any).
+3. Books by the specified author.
+4. Whether there are any recent books.
+5. The titles array.

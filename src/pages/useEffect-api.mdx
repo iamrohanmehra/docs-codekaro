@@ -1,0 +1,75 @@
+import { HeroPattern } from '@/components/HeroPattern'
+
+export const description =
+  'Build an OMDb API clone using React to practice the useEffect hook and API integration.'
+
+<HeroPattern />
+
+# useEffect & API
+
+## **Objective:**
+
+Build an OMDb API clone using React, showcasing your ability to use the `useEffect` hook for API integration. The app should allow users to search for movies, display movie results, and show detailed information about a selected movie.
+
+---
+
+### **Requirements:**
+
+1. **Search Functionality:**
+   - Create a search bar where users can enter a movie name.
+   - On submitting the search, fetch movie data from the [OMDb API](https://www.omdbapi.com/) using the API key provided below.
+   - Display the search results dynamically as users perform a search.
+2. **Movie List Page:**
+   - Show the list of movies returned from the API.
+   - Each movie card should display:
+     - Movie title.
+     - Release year.
+     - Poster image.
+3. **Movie Details Page:**
+   - When a user clicks on a movie card, navigate to a **Movie Details Page**.
+   - Fetch and display the full details of the selected movie, including:
+     - Title.
+     - Year.
+     - Genre.
+     - Plot.
+     - Poster.
+     - Director.
+     - IMDB Rating.
+4. **Routing:**
+   - Use `React Router DOM` to implement navigation:
+     - A route for the **Movie List Page**.
+     - A route for the **Movie Details Page**.
+5. **Design:**
+   - Keep the UI clean and user-friendly.
+   - Focus on functionality over aesthetics, but ensure the layout is intuitive.
+
+---
+
+### **API Information:**
+
+Use the OMDb API for this assignment:
+
+- Base URL: `http://www.omdbapi.com/`
+- Example Query: `http://www.omdbapi.com/?apikey=YOUR_API_KEY&s=batman`
+- API Key: **[You can get your own OMDb API from this link:** [`https://www.omdbapi.com/apikey.aspx`](https://www.omdbapi.com/apikey.aspx)**]**
+  - Replace `YOUR_API_KEY` with the actual API key when making requests.
+
+---
+
+### **Instructions:**
+
+1. **Setup the React App:**
+   - Use `create-react-app` or any other preferred setup method.
+   - Install necessary dependencies like `react-router-dom` for routing.
+2. **Implement API Integration:**
+   - Use `fetch` or `axios` to interact with the OMDb API.
+   - Fetch data when the user searches for a movie or views movie details.
+3. **Use `useEffect` Hook:**
+   - Use the `useEffect` hook for API calls to handle side effects.
+   - Ensure the API call executes only when necessary (e.g., on search or page load for details).
+4. **Error Handling:**
+   - Handle errors gracefully, such as when no movies are found or when the API request fails.
+   - Display appropriate error messages to the user.
+5. **Bonus (Optional):**
+   - Add a loading indicator while fetching data.
+   - Allow users to filter search results by year or genre.
