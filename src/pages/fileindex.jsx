@@ -32,18 +32,18 @@ function AssignmentList({ mdxFiles = [] }) {
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           className="w-full rounded-lg border border-gray-200 bg-white px-4 py-2 
-                   text-gray-900 shadow-sm transition-all 
-                   placeholder:text-gray-400
-                   focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500
-                   dark:border-gray-700 dark:bg-gray-800 dark:text-white 
-                   dark:placeholder:text-gray-500"
+                   text-zinc-900 shadow-sm transition-all 
+                   placeholder:text-zinc-500
+                   focus:border-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-500
+                   dark:border-gray-500 dark:bg-gray-600/50 dark:text-white 
+                   dark:placeholder:text-gray-500 dark:focus:border-gray-300 dark:focus:ring-gray-200"
         />
       </div>
 
       {/* Assignment List */}
-      <div className="mb-16 overflow-hidden rounded-lg border border-gray-200  shadow-sm dark:border-gray-700 ">
+      <div className="mb-16 overflow-hidden rounded-lg border border-gray-200  shadow-sm dark:border-gray-500 ">
         {filteredFiles.length > 0 ? (
-          <div className="divide-y divide-gray-200 dark:divide-gray-700">
+          <div className="divide-y divide-gray-200 dark:divide-gray-500">
             {filteredFiles.map((file) => {
               const fileName = file.replace('.mdx', '')
               const title = formatFileName(file)
@@ -51,7 +51,7 @@ function AssignmentList({ mdxFiles = [] }) {
                 <div key={fileName}>
                   <Link
                     href={`/${fileName}`}
-                    className="block px-4 py-3 transition-colors hover:bg-gray-50 dark:hover:bg-gray-700/50"
+                    className="block px-4 py-3 transition-colors hover:bg-gray-50 dark:hover:bg-gray-600/50"
                   >
                     {title}
                   </Link>

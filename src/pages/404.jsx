@@ -1,11 +1,10 @@
-import { Header } from '@/components/Header'
 import { HeroPattern } from '@/components/HeroPattern'
 
 export default function Custom404() {
   return (
     <div>
       <HeroPattern />
-      <Header />
+
       <div>
         <div className="flex min-h-[70vh] flex-col items-center justify-center text-center">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
